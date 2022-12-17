@@ -87,18 +87,18 @@ fi
 stop_sycgram(){
     res=$(docker stop $(docker ps -a | grep ${GITHUB_IMAGE_NAME} | awk '{print $1}'))
     if [[ $res ]];then
-        echo -e "${yellow}已停止ymsycgrambot...${plain}"
+        echo -e "${yellow}已停止sycgrambot...${plain}"
     else
-        echo -e "${red}无法停止ymsycgrambot...${plain}"
+        echo -e "${red}无法停止sycgrambot...${plain}"
     fi
 }
 
 restart_sycgram(){
     res=$(docker restart $(docker ps -a | grep ${GITHUB_IMAGE_NAME} | awk '{print $1}'))
     if [[ $res ]];then
-        echo -e "${yellow}已重启ymsycgrambot...${plain}"
+        echo -e "${yellow}已重启sycgrambot...${plain}"
     else
-        echo -e "${red}无法重启ymsycgrambot...${plain}"
+        echo -e "${red}无法重启sycgrambot...${plain}"
     fi
 }
 
