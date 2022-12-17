@@ -47,14 +47,14 @@ class Speedtester:
             logger.error(e)
             return f"⚠️ Speedtest Error\n```{res.get('error')}```", ''
         else:
-            text = "**Speedtest**\n" \
-                f"Server: {self.get_server()}\n" \
-                f"Sponsor: {self.get_sponsor()}\n" \
-                f"Upload: {self.get_speed('upload')}\n" \
-                f"Download: {self.get_speed('download')}\n" \
-                f"Jitter: {self.get_ping('jitter')}\n" \
-                f"Latency: {self.get_ping('latency')}\n" \
-                f"Time: {self.get_time()}"
+            text = "**渔幕鱼-Speedtest-测速结果**\n" \
+                f"测速点: {self.get_server()}\n" \
+                f"服务商: {self.get_sponsor()}\n" \
+                f"上传: {self.get_speed('upload')}\n" \
+                f"下载: {self.get_speed('download')}\n" \
+                f"抖动: {self.get_ping('jitter')}\n" \
+                f"延迟: {self.get_ping('latency')}\n" \
+                f"测速时间: {self.get_time()}"
             return text, f"{self.__output.get('result').get('url')}.png"
 
     async def list_servers_ids(self, cmd: str) -> str:
