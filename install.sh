@@ -133,7 +133,7 @@ install_sycgram(){
     --env TZ=$(cat /etc/timezone) \
     --restart always \
     --hostname ${CONTAINER_NAME} \
-    -v ${PROJECT_PATH}/data:/sycgram/data \
+    -v ${PROJECT_PATH}/data:/sycgrambot/data \
     -v /var/run/docker.sock:/var/run/docker.sock \
     -v /usr/bin/docker:/usr/bin/docker \
     ${GITHUB_IMAGE_PATH}:latest
