@@ -1,11 +1,11 @@
 #!/bin/bash
 clear
 
-CONTAINER_NAME="sycgrambot"
+CONTAINER_NAME="sycgrambota"
 GITHUB_IMAGE_NAME="ymxkiss/${CONTAINER_NAME}"
 GITHUB_IMAGE_PATH="ghcr.io/${GITHUB_IMAGE_NAME}"
 #PROJECT_PATH="/opt/${CONTAINER_NAME}"
-PROJECT_VERSION="v2.0.0"
+PROJECT_VERSION="v2.1.0"
 
 red='\033[0;31m'
 green='\033[0;32m'
@@ -47,7 +47,7 @@ pre_check() {
 delete_old_image_and_container(){
     # 获取最新指令说明
     # 远程file
-    remote_file="https://raw.githubusercontent.com/ymxkiss/sycgrambot/main/data/command.yml"
+    remote_file="https://raw.githubusercontent.com/ymxkiss/sycgram/main/data/command.yml"
     # 本地file
     local_cmd_file="${PROJECT_PATH}/data/command.yml"
     if [[ -f ${local_cmd_file} ]]; then
